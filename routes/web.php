@@ -19,4 +19,6 @@ Route::get('/in', function () {
     return view('index');
 });
 
+Route::post('/reestr', 'ReestrController@show');
+
 
