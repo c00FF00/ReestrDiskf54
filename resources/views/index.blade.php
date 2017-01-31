@@ -26,16 +26,28 @@
     </form>
     <div class="panels">
 
-
+@foreach($result as $item)
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Запись №: 2345234523452345</h3>
+                <h3 class="panel-title">Запись №: {{ $item->number_of_the_record }}</h3>
             </div>
             <div class="panel-body">
-
+              <p>Ф.И.О.  {{ $item->full_name }}</p>
+              <p>Дата рождения {{ $item->date_of_birth }}</p>
+                <p></p>{{ $item->place_of_birth }}
+                {{ name_of_the_organization',--}}
+                {{--'number_of_the_organization',--}}
+                {{--'post_of_the_person',--}}
+                {{--'administrative_code',--}}
+                {{--'punitive_organization',--}}
+                {{--'name_of_the_judge',--}}
+                {{--'position_of_the_judge',--}}
+                {{--'period_of_ineligibility',--}}
+                {{--'start_date',--}}
+                {{--'date_of_expiry'--}}
             </div>
         </div>
-
+@endforeach
 
     </div>
 

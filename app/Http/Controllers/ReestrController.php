@@ -9,9 +9,9 @@ class ReestrController extends Controller
 {
     public function show(Request $request) {
     $data = new Reestr();
-        var_dump($data->getByFamily($request->name));
+    $result = $data->getByFamily($request->family);
 
-
-
+        return view('index', compact('result'));
     }
+
 }
